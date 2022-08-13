@@ -227,7 +227,7 @@ var main = function (input) {
           playerHand[1].name +
           "(" +
           playerHand[1].suit +
-          ")<br><br>while dealer has<br><br>" +
+          ")<br><br>while dealer has " +
           dealerHand[0].name +
           "(" +
           dealerHand[0].suit +
@@ -235,7 +235,7 @@ var main = function (input) {
           dealerHand[1].name +
           "(" +
           dealerHand[1].suit +
-          ").<br><br>Both Player and Dealer have Blackjack!<br><br>It is a tie!");
+          ").<br><br>Both Player and Dealer have Blackjack! It is a tie!");
       }
       //only player has blackjack -> Player wins
       else if (playerHasBlackjack == true && dealerHasBlackjack == false) {
@@ -248,7 +248,7 @@ var main = function (input) {
           playerHand[1].name +
           "(" +
           playerHand[1].suit +
-          ")<br><br>while dealer has<br><br>" +
+          ")<br><br>while dealer has " +
           dealerHand[0].name +
           "(" +
           dealerHand[0].suit +
@@ -256,7 +256,7 @@ var main = function (input) {
           dealerHand[1].name +
           "(" +
           dealerHand[1].suit +
-          ").<br><br>Player has Blackjack!<br><br>Player wins!");
+          ").<br><br>Player has Blackjack! Player wins!");
       }
       //only dealer has blackjack -> dealer wins
     } else if (playerHasBlackjack == false && dealerHasBlackjack == true) {
@@ -269,7 +269,7 @@ var main = function (input) {
         playerHand[1].name +
         "(" +
         playerHand[1].suit +
-        ")<br><br>while dealer has<br><br>" +
+        ")<br><br>while dealer has " +
         dealerHand[0].name +
         "(" +
         dealerHand[0].suit +
@@ -277,7 +277,7 @@ var main = function (input) {
         dealerHand[1].name +
         "(" +
         dealerHand[1].suit +
-        ").<br><br>Dealer has Blackjack!<br><br>Dealer wins!");
+        ").<br><br>Dealer has Blackjack! Dealer wins!");
     } else {
       // No blackjack -> game continues
       currentGameMode = HIT_OR_STAND_PLAYER;
@@ -342,7 +342,7 @@ var main = function (input) {
         return (outputMessage =
           "Player has chosen to stand with a hand value of " +
           playerTotalHandValue +
-          ".<br><br>It is now the dealers turn and the dealer revealed his/her covered card to be " +
+          ".<br><br>It is now the Dealer's turn and the Dealer revealed his/her covered card to be " +
           dealerHand[1].name +
           "(" +
           dealerHand[1].suit +
