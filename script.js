@@ -305,13 +305,18 @@ var main = function (input) {
     playerTotalHandValue = calculateTotalHandValue(playerHand);
 
     console.log("Player total HandValue ==>", playerTotalHandValue);
-    if (input != "hit" && input != "stand") {
+    if (
+      input != "hit" &&
+      input != "Hit" &&
+      input != "stand" &&
+      input != "Stand"
+    ) {
       return (outputMessage =
         "Please type in 'hit' or 'stand'. Player has a total value of " +
         playerTotalHandValue +
         " so far.");
     } else {
-      if (input == "hit" && playerTotalHandValue <= 21) {
+      if ((input == "hit" || input == "Hit") && playerTotalHandValue <= 21) {
         playerHand.push(gameDeck.pop());
         counter1 = counter1 + 1;
         console.log("this is additionalPlayerCard ==>", playerHand[counter1]);
@@ -324,12 +329,15 @@ var main = function (input) {
           "), getting a total value of " +
           playerTotalHandValue +
           ". Type in 'hit' or 'stand' next.");
-      } else if (input == "hit" && playerTotalHandValue >= 21) {
+      } else if (
+        (input == "hit" || input == "Hit") &&
+        playerTotalHandValue >= 21
+      ) {
         return (outputMessage =
           "Player's hand value is " +
           playerTotalHandValue +
           ", more than 21, and cannot draw any more cards! Please type in 'stand'.");
-      } else if (input == "stand") {
+      } else if (input == "stand" || input == "Stand") {
         currentGameMode = HIT_OR_STAND_DEALER;
         return (outputMessage =
           "Player has chosen to stand with a hand value of " +
